@@ -5,11 +5,17 @@ Console.Write("Введите цифру, обозначающую день не
 int.TryParse(Console.ReadLine(), out int den);
 
 
-if (den > 6) 
+if (den > 7) 
 {
-   Console.WriteLine($"Этот день является выходным");
+  Console.WriteLine($"Этот день не является днём недели, введите число от 1 до 7");
 }
 else  
-{
-Console.WriteLine($"Этот день не является выходным");
-}
+   if (den > 5)
+   {
+    Console.WriteLine($"Этот день является выходным");
+   }
+  
+  else  
+  {
+    Console.WriteLine($"Этот день не является выходным");
+  }
